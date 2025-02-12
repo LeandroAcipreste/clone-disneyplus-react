@@ -4,4 +4,6 @@ body{
   color: #fff;
   font-family: "Roboto", serif;
   background-color: #040714;
+  overflow-y: hidden;
+  margin: 0 0;
 }

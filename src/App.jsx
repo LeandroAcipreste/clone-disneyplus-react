@@ -1,19 +1,22 @@
-import { useState } from 'react'
-import './App.css'
-import Header from './components/header/header'
-import Home from './components/home/home'
+import './App.css';
+import Header from './components/header/header';
+import Home from './components/home/home';
+import Detail from './components/detail/detail';
+import Login from './components/login/login';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // Corrigido
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <Header/>
-        <Home/>   
-      </div>
-    </>
-  )
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} /> 
+        <Route path="/detail" element={<Detail />} />
+        <Route path='/login'  element={<Login/>}/>
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
+
